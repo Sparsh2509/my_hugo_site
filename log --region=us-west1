@@ -1,0 +1,53 @@
+[m[1mNAME[m
+    gcloud builds log - stream the logs for a build
+
+[m[1mSYNOPSIS[m
+    [1mgcloud builds log[m [4mBUILD[m [[1m--region[m=[4mREGION[m] [[1m--stream[m] [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    Stream the logs for a build.
+
+[m[1mEXAMPLES[m
+    To stream logs for in progress build [1m123-456-789[m:
+
+        $ gcloud builds log --stream `123-456-789`
+
+    To display logs for a completed build [1m098-765-432[m:
+
+        $ gcloud builds log `098-765-432`
+
+[m[1mPOSITIONAL ARGUMENTS[m
+     [4mBUILD[m
+        The build whose logs shall be printed. The ID of the build is printed
+        at the end of the build submission process, or in the ID column when
+        listing builds.
+
+[m[1mFLAGS[m
+     [1m--region[m=[4mREGION[m
+        The region of the Cloud Build Service to use. Must be set to a
+        supported region name (e.g. [1mus-central1[m). If unset, [1mbuilds/region[m,
+        which is the default region to use when working with Cloud Build
+        resources, is used. If builds/region is unset, region is set to [1mglobal[m.
+        Note: Region must be specified in 2nd gen repo; [1mglobal[m is not
+        supported.
+
+     [1m--stream[m
+        If a build is ongoing, stream the logs to stdout until the build
+        completes.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --access-token-file, --account,
+    --billing-project, --configuration, --flags-file, --flatten, --format,
+    --help, --impersonate-service-account, --log-http, --project, --quiet,
+    --trace-token, --user-output-enabled, --verbosity.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha builds log
+
+        $ gcloud beta builds log
+
+[m
